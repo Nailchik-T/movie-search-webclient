@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# Movie Web Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простое веб-приложение для просмотра информации о фильмах с использованием React с использованием TypeScript и API (https://www.omdbapi.com/).
 
-Currently, two official plugins are available:
+## Функционал
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Отображение списка фильмов
 
-## Expanding the ESLint configuration
+- Приложение отображает список фильмов, получаемых с помощью API.
+- Для каждого фильма отображается:
+    - Постер фильма (если доступен).
+    - Название фильма.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 2. Фильтрация списка фильмов
 
-- Configure the top-level `parserOptions` property like this:
+- Возможность искать фильм по названию.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 3. Просмотр детальной информации о фильме
+
+- При клике на фильм из списка приложение переходит на страницу с детальной информацией об этом фильме.
+- На странице фильма отображается:
+    - Постер фильма (если доступен).
+    - Название фильма.
+    - Описание фильма.
+    - Дата выхода.
+    - Список жанров. 
+    - Список актеров.
+
+### 4. Добавление фильмов в избранное
+
+- Возможность добавления фильмов в список "избранное".
+- Отдельная страница со списком избранных фильмов.
+- Сохранение списка при перезагрузке страницы.
+
+## При разработке были использованы следующие технологии
+
+- React, TypeScript.
+- хуки и функциональные компоненты React.
+- Axios для работы с HTTP-запросами
+- Material UI, Tailwind CSS.
+- Mobx + Local Storage для сохранения избранных фильмов.
+
+## Установка и запуск
+
+### Клонирование репозитория
+
+```bash
+git clone https://github.com/Nailchik-T/movie-search-webclient.git
+cd movie-search-webclient
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Запуск приложения
+
+```bash
+npm run dev
+```
