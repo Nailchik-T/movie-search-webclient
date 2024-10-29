@@ -1,0 +1,1 @@
+export { CardMovieDetail } from "./CardMovieDetail";
