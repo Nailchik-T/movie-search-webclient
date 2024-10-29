@@ -37,7 +37,7 @@
 - React, TypeScript.
 - хуки и функциональные компоненты React.
 - Axios для работы с HTTP-запросами
-- Material UI, Tailwind CSS.
+- Material UI.
 - Mobx + Local Storage для сохранения избранных фильмов.
 
 ## Установка и запуск
